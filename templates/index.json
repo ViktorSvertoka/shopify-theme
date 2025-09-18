@@ -9,43 +9,34 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "hero_slider_home": {
+      "type": "hero-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide1": {
+          "type": "slide",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "slide_image": "shopify://shop_images/slide1.jpg"
           }
         },
-        "button": {
-          "type": "buttons",
+        "slide2": {
+          "type": "slide",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "slide_image": "shopify://shop_images/slide2.jpg"
+          }
+        },
+        "slide3": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/slide3.jpg"
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["slide1", "slide2", "slide3"],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
+        "title": "More than just shoes — it's a part of your story.",
+        "subtitle": "Original sneakers from Nike and other top brands that make every step feel special.",
+        "button_label": "Shop the Collection",
+        "button_link": "shopify://collections/all"
       }
     },
     "featured_collection_pdqLYz": {
@@ -107,7 +98,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "hero_slider_home",
     "featured_collection_pdqLYz",
     "featured_collection"
   ]
