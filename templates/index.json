@@ -12,11 +12,30 @@
     "hero_slider_home": {
       "type": "hero-slider",
       "blocks": {
-        "slide1": { "type": "slide", "settings": { "slide_image": "" } },
-        "slide2": { "type": "slide", "settings": { "slide_image": "" } },
-        "slide3": { "type": "slide", "settings": { "slide_image": "" } }
+        "slide1": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp"
+          }
+        },
+        "slide2": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/hero-02_2x_f6688f61-02ee-47c4-93f2-128bbcfe4e9d.webp"
+          }
+        },
+        "slide3": {
+          "type": "slide",
+          "settings": {
+            "slide_image": "shopify://shop_images/hero-03_2x_9ed3e3f7-6be0-4be2-923f-d6dc9173fe3b.webp"
+          }
+        }
       },
-      "block_order": ["slide1", "slide2", "slide3"],
+      "block_order": [
+        "slide1",
+        "slide2",
+        "slide3"
+      ],
       "settings": {
         "title": "More than just shoes — it's a part of your story.",
         "subtitle": "Original sneakers from Nike and other top brands that make every step feel special.",
