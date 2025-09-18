@@ -43,27 +43,6 @@
   flex-shrink: 0;
 }
 
-.hero__slide--1 {
-  background-image: image-set(
-    url('/images/sections/01-hero/hero-01.webp') 1x,
-    url('/images/sections/01-hero/hero-01@2x.webp') 2x
-  );
-}
-
-.hero__slide--2 {
-  background-image: image-set(
-    url('/images/sections/01-hero/hero-02.webp') 1x,
-    url('/images/sections/01-hero/hero-02@2x.webp') 2x
-  );
-}
-
-.hero__slide--3 {
-  background-image: image-set(
-    url('/images/sections/01-hero/hero-03.webp') 1x,
-    url('/images/sections/01-hero/hero-03@2x.webp') 2x
-  );
-}
-
 .hero__content {
   position: relative;
   z-index: 10;
