@@ -1,6 +1,3 @@
-import Swiper from 'swiper';
-import { Pagination, Autoplay } from 'swiper/modules';
-
 const heroSliderConfig = {
   direction: 'horizontal',
   speed: 3000,
@@ -11,7 +8,6 @@ const heroSliderConfig = {
   slidesPerView: 1,
   loop: false,
   spaceBetween: 0,
-  init: false,
   pagination: {
     el: '.hero__pagination',
     clickable: true,
@@ -34,7 +30,6 @@ const initHeroSlider = () => {
   if (!container) return;
 
   const heroSwiper = new Swiper(container, {
-    modules: [Pagination, Autoplay],
     ...heroSliderConfig,
     on: {
       slideChange() {
@@ -48,20 +43,11 @@ const initHeroSlider = () => {
     },
   });
 
-  setTimeout(() => {
-    heroSwiper.init();
-    heroSwiper.update();
-  }, 100);
-
   window.heroSwiper = heroSwiper;
 };
 
-const bootstrapHeroSlider = () => {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeroSlider);
-  } else {
-    initHeroSlider();
-  }
-};
-
-bootstrapHeroSlider();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initHeroSlider);
+} else {
+  initHeroSlider();
+}

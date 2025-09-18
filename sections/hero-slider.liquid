@@ -5,9 +5,11 @@
   <div class="hero__slider swiper-container">
     <div class="hero__wrapper swiper-wrapper">
       {% for block in section.blocks %}
-    <div class="hero__slide swiper-slide"
-       style="background-image: url('{{ block.settings.slide_image | img_url: '2048x' }}');">
-    </div>
+      {% if block.settings.slide_image != blank %}
+      <div class="hero__slide swiper-slide"
+         style="background-image: url('{{ block.settings.slide_image | img_url: '2048x' }}');">
+      </div>
+      {% endif %}
       {% endfor %}
 
     </div>
@@ -18,7 +20,7 @@
     <div class="hero__inner">
       <h1 class="hero__title">{{ section.settings.title }}</h1>
       <p class="hero__subtitle">{{ section.settings.subtitle }}</p>
-      <a href="{{ section.settings.button_link }}" class="hero__button button button--light">
+      <a class="hero__button" href="{{ section.settings.button_link }}">
         {{ section.settings.button_label }}
       </a>
     </div>
