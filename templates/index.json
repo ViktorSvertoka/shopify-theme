@@ -12,24 +12,9 @@
     "hero_slider_home": {
       "type": "hero-slider",
       "blocks": {
-        "slide1": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/slide1.jpg"
-          }
-        },
-        "slide2": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/slide2.jpg"
-          }
-        },
-        "slide3": {
-          "type": "slide",
-          "settings": {
-            "slide_image": "shopify://shop_images/slide3.jpg"
-          }
-        }
+        "slide1": { "type": "slide", "settings": { "slide_image": "" } },
+        "slide2": { "type": "slide", "settings": { "slide_image": "" } },
+        "slide3": { "type": "slide", "settings": { "slide_image": "" } }
       },
       "block_order": ["slide1", "slide2", "slide3"],
       "settings": {

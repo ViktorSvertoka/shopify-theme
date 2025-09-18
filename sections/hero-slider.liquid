@@ -4,12 +4,12 @@
 <section class="hero">
   <div class="hero__slider swiper-container">
     <div class="hero__wrapper swiper-wrapper">
-      {%- for block in section.blocks -%}
-        <div 
-          class="hero__slide swiper-slide" 
-          style="background-image: url('{{ block.settings.slide_image | image_url: width: 1920 }}');"
-        ></div>
-      {%- endfor -%}
+      {% for block in section.blocks %}
+    <div class="hero__slide swiper-slide"
+       style="background-image: url('{{ block.settings.slide_image | img_url: '2048x' }}');">
+    </div>
+      {% endfor %}
+
     </div>
     <div class="hero__pagination swiper-pagination"></div>
   </div>

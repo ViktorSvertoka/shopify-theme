@@ -1,8 +1,5 @@
 import Swiper from 'swiper';
 import { Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
 
 const heroSliderConfig = {
   direction: 'horizontal',
@@ -59,4 +56,12 @@ const initHeroSlider = () => {
   window.heroSwiper = heroSwiper;
 };
 
-document.addEventListener('DOMContentLoaded', initHeroSlider);
+const bootstrapHeroSlider = () => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroSlider);
+  } else {
+    initHeroSlider();
+  }
+};
+
+bootstrapHeroSlider();
