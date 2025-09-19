@@ -184,6 +184,68 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_EJdXGb": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_B3amaJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are Nike's delivery options?",
+            "icon": "check_mark",
+            "row_content": "<p>When you shop Nike online, either in the Nike App or on Nike.com, you can return items that are unworn and unwashed and still have their product tags attached within 30 days of purchase (some exceptions apply). That includes custom Nike By You sneakers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ENXgd3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Nike's returns policy?",
+            "icon": "check_mark",
+            "row_content": "<p>When you shop Nike online, either in the Nike App or on Nike.com, you can return items that are unworn and unwashed and still have their product tags attached within 30 days of purchase (some exceptions apply). That includes custom Nike By You sneakers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kUc6yN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where is my Nike order?",
+            "icon": "check_mark",
+            "row_content": "<p>When you shop Nike online, either in the Nike App or on Nike.com, you can return items that are unworn and unwashed and still have their product tags attached within 30 days of purchase (some exceptions apply). That includes custom Nike By You sneakers.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CripTX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I find the right size and fit?",
+            "icon": "check_mark",
+            "row_content": "<p>When you shop Nike online, either in the Nike App or on Nike.com, you can return items that are unworn and unwashed and still have their product tags attached within 30 days of purchase (some exceptions apply). That includes custom Nike By You sneakers.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_B3amaJ",
+        "collapsible_row_ENXgd3",
+        "collapsible_row_kUc6yN",
+        "collapsible_row_CripTX"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -251,6 +313,7 @@
     "slideshow_KBhAG4",
     "featured_collection_6jtCVG",
     "featured_product_ApqhX9",
+    "collapsible_content_EJdXGb",
     "featured_collection",
     "hero_slider_home"
   ]
