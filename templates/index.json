@@ -51,11 +51,11 @@
           "settings": {
             "image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp",
             "image_overlay_opacity": 0,
-            "heading": "Image slide",
+            "heading": "More than just shoes — it’s a part of your story.",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
+            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
             "button_label": "Shop the Collection",
-            "link": "",
+            "link": "shopify://collections/all",
             "button_style_secondary": false,
             "show_text_box": true,
             "box_align": "middle-center",
@@ -177,9 +177,9 @@
     }
   },
   "order": [
-    "hero_slider_home",
     "slideshow_KBhAG4",
     "featured_collection_pdqLYz",
-    "featured_collection"
+    "featured_collection",
+    "hero_slider_home"
   ]
 }
