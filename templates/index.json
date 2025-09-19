@@ -233,7 +233,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "Frequently asked questions",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
@@ -271,6 +271,70 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "video_hyEKhD": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "Video Nike Air Max 270",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://youtu.be/O-JXUhhIRHU?si=6TXb3J2q94zeT1jc",
+        "cover_image": "shopify://shop_images/wp9710283-nike-air-max-270-wallpapers.jpg",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_GYzxVP": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_AQYpnx": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Nike</strong> CORTEZ TXT",
+            "heading_size": "h1"
+          }
+        },
+        "text_mBGqgE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Моделі Nike Cortez були розроблені в 1972 році співзасновником Nike Біллом Бауерманом. Вони швидко стали найпопулярнішим вибором для бігу та перетворились на впізнавану ікону, вплетену в історію попкультури.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_HHVzLT": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop the Collection",
+            "button_link": "shopify://products/nike-cortez-txt",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_AQYpnx",
+        "text_mBGqgE",
+        "button_HHVzLT"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/featured-08_2x_33604ea6-9b54-4f15-ba06-b5082baad829.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -315,6 +379,8 @@
     "featured_product_ApqhX9",
     "collapsible_content_EJdXGb",
     "featured_collection",
+    "video_hyEKhD",
+    "image_with_text_GYzxVP",
     "hero_slider_home"
   ]
 }
