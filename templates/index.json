@@ -12,25 +12,6 @@
     "slideshow_KBhAG4": {
       "type": "slideshow",
       "blocks": {
-        "slide_pKgHmR": {
-          "type": "slide",
-          "settings": {
-            "media_type": "video",
-            "video": "shopify://files/videos/nike-video.mp4",
-            "image_overlay_opacity": 0,
-            "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
-            "heading_size": "h0",
-            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
-            "button_label": "Shop the Collection",
-            "link": "shopify://collections/all",
-            "button_style_secondary": false,
-            "show_text_box": false,
-            "box_align": "middle-left",
-            "text_alignment": "left",
-            "text_alignment_mobile": "center",
-            "color_scheme": "scheme-3"
-          }
-        },
         "slide_TeMWrj": {
           "type": "slide",
           "settings": {
@@ -106,14 +87,33 @@
             "text_alignment_mobile": "center",
             "color_scheme": "scheme-3"
           }
+        },
+        "slide_pKgHmR": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "video": "shopify://files/videos/nike-video.mp4",
+            "image_overlay_opacity": 0,
+            "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
+            "heading_size": "h0",
+            "subheading": "Original sneakers from Nike and other top brands that make every step feel special.",
+            "button_label": "Shop the Collection",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-3"
+          }
         }
       },
       "block_order": [
-        "slide_pKgHmR",
         "slide_TeMWrj",
         "slide_TENPKV",
         "slide_r7Lgfx",
-        "slide_xFCXRn"
+        "slide_xFCXRn",
+        "slide_pKgHmR"
       ],
       "custom_css": [],
       "name": "t:sections.slideshow.presets.name",
