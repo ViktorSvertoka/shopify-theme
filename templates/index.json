@@ -15,6 +15,7 @@
         "slide_FgbWWc": {
           "type": "slide",
           "settings": {
+            "image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
@@ -32,6 +33,7 @@
         "slide_adMVex": {
           "type": "slide",
           "settings": {
+            "video": "shopify://files/videos/nike-video.mp4",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
