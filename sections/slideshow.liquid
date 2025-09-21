@@ -121,8 +121,7 @@
         tabindex="-1"
       >
        <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.media_type == 'image' %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-            
-{% if block.settings.media_type == 'image' and block.settings.image %}
+            {% if block.settings.type == 'image' and block.settings.image %}
   {%- liquid
     assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
     if section.settings.image_behavior == 'ambient'
@@ -143,17 +142,19 @@
     | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
   }}
 {% elsif block.settings.media_type == 'video' and block.settings.video %}
-  <video autoplay muted loop playsinline>
-    <source src="{{ block.settings.video | file_url }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-{% else %}
-  {%- assign placeholder_slide = forloop.index | modulo: 2 -%}
-  {%- if placeholder_slide == 1 -%}
-    {{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- else -%}
-    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-  {%- endif -%}
+  {% assign video_obj = block.settings.video %}
+  {% if video_obj.sources %}
+    <video autoplay muted loop playsinline>
+      {% for src in video_obj.sources %}
+        {% if src.format == 'mp4' %}
+          <source src="{{ src.url }}" type="video/mp4">
+        {% elsif src.format == 'm3u8' %}
+          <source src="{{ src.url }}" type="application/x-mpegURL">
+        {% endif %}
+      {% endfor %}
+      Your browser does not support the video tag.
+    </video>
+  {% endif %}
 {% endif %}
         </div>
 

@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp",
+            "image": null,
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
@@ -35,7 +35,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/hero-02_2x_f6688f61-02ee-47c4-93f2-128bbcfe4e9d.webp",
+            "image": null,
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your story.</strong>",
             "heading_size": "h0",
@@ -54,7 +54,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/hero-03_2x_9ed3e3f7-6be0-4be2-923f-d6dc9173fe3b.webp",
+            "image": null,
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your story.</strong>",
             "heading_size": "h0",
@@ -73,7 +73,7 @@
           "type": "slide",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/nike.gif",
+            "image": null,
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
@@ -92,7 +92,7 @@
           "type": "slide",
           "settings": {
             "media_type": "video",
-            "video": "shopify://files/videos/nike-video.mp4",
+            "video": null,
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
@@ -359,11 +359,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_AQYpnx",
-        "text_mBGqgE",
-        "button_HHVzLT"
-      ],
+      "block_order": ["heading_AQYpnx", "text_mBGqgE", "button_HHVzLT"],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "image": "shopify://shop_images/featured-08_2x_33604ea6-9b54-4f15-ba06-b5082baad829.webp",
@@ -403,11 +399,7 @@
           }
         }
       },
-      "block_order": [
-        "slide1",
-        "slide2",
-        "slide3"
-      ],
+      "block_order": ["slide1", "slide2", "slide3"],
       "disabled": true,
       "settings": {
         "title": "More than just shoes — it's a part of your story.",
