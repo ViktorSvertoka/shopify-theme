@@ -15,8 +15,7 @@
         "slide_pKgHmR": {
           "type": "slide",
           "settings": {
-            "media_type": "video",
-            "video_url": "",
+            "media_type": "image",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
@@ -36,7 +35,6 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp",
-            "video_url": "",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
@@ -56,7 +54,6 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/hero-02_2x_f6688f61-02ee-47c4-93f2-128bbcfe4e9d.webp",
-            "video_url": "",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your story.</strong>",
             "heading_size": "h0",
@@ -76,7 +73,6 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/hero-03_2x_9ed3e3f7-6be0-4be2-923f-d6dc9173fe3b.webp",
-            "video_url": "",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your story.</strong>",
             "heading_size": "h0",
@@ -96,7 +92,6 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/nike.gif",
-            "video_url": "",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
