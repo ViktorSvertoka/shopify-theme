@@ -12,10 +12,64 @@
     "slideshow_emBUyg": {
       "type": "slideshow",
       "blocks": {
-        "slide_FgbWWc": {
+        "slide_ANm7aR": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/hero-01_2x_e942b541-33e5-4963-b9bc-9a9a1332d08f.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_NdjwHf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hero-02_2x_f6688f61-02ee-47c4-93f2-128bbcfe4e9d.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_VGRaPf": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hero-03_2x_9ed3e3f7-6be0-4be2-923f-d6dc9173fe3b.webp",
+            "image_overlay_opacity": 0,
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_FgbWWc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/nike.gif",
             "image_overlay_opacity": 0,
             "heading": "Image slide",
             "heading_size": "h1",
@@ -50,6 +104,9 @@
         }
       },
       "block_order": [
+        "slide_ANm7aR",
+        "slide_NdjwHf",
+        "slide_VGRaPf",
         "slide_FgbWWc",
         "slide_adMVex"
       ],
