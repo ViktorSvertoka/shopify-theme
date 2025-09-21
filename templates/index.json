@@ -16,6 +16,7 @@
           "type": "slide",
           "settings": {
             "media_type": "video",
+            "video": "shopify://files/videos/nike-video.mp4",
             "image_overlay_opacity": 0,
             "heading": "<strong>More than just shoes — it’s a part of your    story.</strong>",
             "heading_size": "h0",
