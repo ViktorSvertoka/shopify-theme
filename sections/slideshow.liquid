@@ -121,7 +121,8 @@
         tabindex="-1"
       >
        <div class="slideshow__media banner__media media{% if block.settings.image == blank and block.settings.media_type == 'image' %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
-            {% if block.settings.type == 'image' and block.settings.image %}
+            
+{% if block.settings.media_type == 'image' and block.settings.image %}
   {%- liquid
     assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
     if section.settings.image_behavior == 'ambient'
@@ -141,7 +142,7 @@
     | image_url: width: 3840
     | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
   }}
-{% elsif block.settings.type == 'video' and block.settings.video %}
+{% elsif block.settings.media_type == 'video' and block.settings.video %}
   <video autoplay muted loop playsinline>
     <source src="{{ block.settings.video | file_url }}" type="video/mp4">
     Your browser does not support the video tag.
