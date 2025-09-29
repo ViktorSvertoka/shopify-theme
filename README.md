@@ -1,28 +1,28 @@
 ### Результат виконаного ДЗ
 
-#### Завдання 1
+#### Робота з Git та ведення проєктів
 
-- Скріншот з Shopify Partner Account (створений Development Store).
+- [x] Dev-store у Partner Dashboard створено.
+
+- [x] Встановлено тему Dawn.
+
+- [x] Shopify CLI встановлено.
+
+- [x] Завантажено тему через CLI.
+
+- [x] Репозиторій створено.
+
+- [x] Код на GitHub завантажено.
+
+- [x] Створена гілка dev від main.
+
+- [x] Прив’язати обидві теми до GitHub у Shopify Admin (main/dev).
+
+- [x] Створена гілка feature/slideshow, змінено секцію, зроблено commit.
+
+- [x] Відкритий PR → merge у dev.
 
 ![Results](./screens/screen_01.png)
-
-![Results](./screens/screen_02.png)
-
-#### Завдання 2
-
-- Скріншот з локальним кодом Dawn (папки `sections`, `templates`).
-
-![Results](./screens/screen_03.png)
-
-![Results](./screens/screen_04.png)
-
-#### Завдання 3
-
-- Скріншот з Theme Editor, де показаний Hero Banner (Slideshow).
-
-![Results](./screens/screen_05.png)
-
-![Results](./screens/screen_06.png)
 
 > [!NOTE]
 >
