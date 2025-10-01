@@ -188,7 +188,15 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "duties_and_taxes_included": "Duties and taxes included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+
+      "banner": {
+        "not_found": "Product not found",
+        "no_colors": "This product does not have a color option.",
+        "select_color": "Choose a color",
+        "not_available": "Not available",
+        "available_with_count": "Available: %{count}"
+      }
     },
     "modal": {
       "label": "Media gallery"
