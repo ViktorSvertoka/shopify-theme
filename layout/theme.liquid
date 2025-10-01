@@ -302,7 +302,7 @@
   href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
   />
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -319,6 +319,12 @@
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
+
+{% if template == 'index' %}
+  <div class="page-width" style="margin: 40px auto;">
+    {% render 'banner-product', handle: 'nike-air-max' %}
+  </div>
+{% endif %}
 
     {% sections 'footer-group' %}
 
