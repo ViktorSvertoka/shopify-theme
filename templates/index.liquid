@@ -1,0 +1,17 @@
+<div class="home-intro">
+  <h1 class="home-intro__title">
+    {{ 'home.welcome' | t: default: 'Welcome to our store' }}
+  </h1>
+  <p class="home-intro__description">
+    {{ 'home.description' | t: default: 'Discover our collection of products' }}
+  </p>
+  <a href="{{ routes.collections_url }}" class="button button--primary">
+    {{ 'home.shop_now' | t: default: 'Shop Now' }}
+  </a>
+</div>
+
+
+<div>
+  {%- render 'banner-product', handle: 'nike-air-max' -%}
+</div>
+

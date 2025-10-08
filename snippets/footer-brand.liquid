@@ -1,0 +1,15 @@
+<div class="footer__brand">
+  <a href="{{ routes.root_url }}" class="footer__logo-link" aria-label="{{ shop.name }}">
+     <img 
+          src="{{ 'icon-shopify.svg' | asset_url }}" 
+          alt="{{ shop.name }}" 
+          width="40" 
+          height="40"
+          class="footer__logo-img"
+          aria-hidden="true"
+     >
+  </a>
+  <p class="footer__description">
+    {{ 'footer.description' | t: default: 'Your trusted online store' }}
+  </p>
+</div>

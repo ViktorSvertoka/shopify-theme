@@ -1,0 +1,20 @@
+<p class="banner-product__select-size" id="size-label">
+  {{ 'products.product.banner.select_size' | t }}
+</p>
+<div class="banner-product__sizes" role="group" aria-labelledby="size-label">
+  {%- assign sizes = product.variants | map: 'option2' | uniq -%}
+  {%- for size in sizes -%}
+    {%- assign variant = product.variants | where: 'option2', size | first -%}
+    {%- if variant -%}
+      <button 
+        type="button" 
+        class="banner-product__size-btn"
+        data-variant-id="{{ variant.id }}"
+        data-available="{{ variant.available }}"
+      >
+         EU {{ size }}
+      </button>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+

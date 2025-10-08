@@ -1,0 +1,12 @@
+<nav class="footer__nav" aria-label="{{ 'a11y.footer_info' | t: default: 'Information' }}">
+  <h3 class="footer__heading">{{ 'footer.info_heading' | t: default: 'Information' }}</h3>
+  <ul class="footer__links">
+    {%- for link in linklists.footer.links -%}
+      <li class="footer__link-item">
+        <a href="{{ link.url }}" class="footer__link">
+          {{- link.title | escape -}}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

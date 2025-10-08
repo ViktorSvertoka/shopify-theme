@@ -1,0 +1,46 @@
+{%- assign color_option_index = nil -%}
+{%- for option in product.options_with_values -%}
+  {%- assign opt_name = option.name | downcase -%}
+  {%- if opt_name contains 'color' or opt_name contains 'colour' or opt_name contains 'колір' -%}
+    {%- assign color_option_index = forloop.index0 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if color_option_index != nil -%}
+  <div class="banner-product__colors">
+    {%- assign images_per_color = 5 -%}
+    {%- assign color_index = 0 -%}
+    {%- for variant in product.variants -%}
+      {%- if variant.featured_image -%}
+        {%- assign start_index = color_index | times: images_per_color -%}
+        {%- assign end_index = start_index | plus: images_per_color | minus: 1 -%}
+        <button 
+          type="button"
+          class="banner-product__color-btn"
+          data-start="{{ start_index }}"
+          data-end="{{ end_index }}"
+          data-price="{{ variant.price | money }}"
+          data-compare="{{ variant.compare_at_price | money }}"
+          data-available="{{ variant.available }}"
+          data-qty="{{ variant.inventory_quantity }}"
+        >
+          {{ variant.featured_image | image_url: width: 60 | image_tag: 
+              alt: variant.featured_image.alt | default: product.title | default: 'Product image', width: 60, height: 60, loading: 'lazy' }}
+        </button>
+        {%- assign color_index = color_index | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  <div 
+    class="banner-product__stock js-stock"
+    role="status"
+    aria-live="polite"
+    data-not-available="{{ 'products.product.banner.not_available' | t }}"
+    data-available-template="{{ 'products.product.banner.available_with_count' | t: count: '__COUNT__' }}"
+  >
+    {{ 'products.product.banner.select_color' | t }}
+  </div>
+{%- endif -%}
+
+ 

@@ -12,130 +12,34 @@
 -%}
 
 {%- if banner_product == nil or banner_product == blank -%}
-  <div class="banner-product__error">
-    Product not found
+  <div class="banner-product__error" role="alert">
+    {{ 'products.product.banner.not_found' | t }}
   </div>
-{%- endif -%}
-
-<div class="banner-product">
-   <div class="banner-product__gallery"
-       data-all-images='[
-         {%- if banner_product.images != blank -%}
-           {%- for image in banner_product.images -%}
-             "{{ image | image_url: width: 800 }}"{% unless forloop.last %},{% endunless %}
-           {%- endfor -%}
-         {%- else -%}
-           "{{ 'product-placeholder.jpg' | asset_url }}"
-         {%- endif -%}
-       ]'>
-    <div class="banner-product__thumbs"></div>
-
-    <div class="banner-product__main"></div>
-  </div>
-
-  <div class="banner-product__content">
-    <h2 class="banner-product__title">{{ banner_product.title | escape }}</h2>
-
-    {%- if banner_product.tags contains "Highly Rated" -%}
-  <p class="banner-product__badge">
-    <img 
-      src="{{ 'icon-star.svg' | asset_url }}" 
-      alt="Star" 
-      class="badge__icon"
-      width="16"
-      height="16"
-    >
-    Highly Rated
-  </p>
-{%- endif -%}
-
-    {%- if banner_product.price != blank -%}
-  <div class="banner-product__price">
-    {%- if banner_product.compare_at_price > banner_product.price -%}
-      <span class="price price--sale">{{ banner_product.price | money }}</span>
-      <span class="price price--old">{{ banner_product.compare_at_price | money }}</span>
-    {%- else -%}
-      <span class="price">{{ banner_product.price | money }}</span>
-    {%- endif -%}
-  </div>
-{%- endif -%}
-
-
-    {%- assign color_option_index = nil -%}
-    {%- for option in banner_product.options_with_values -%}
-      {%- assign opt_name = option.name | downcase -%}
-      {%- if opt_name contains 'color' or opt_name contains 'colour' or opt_name contains 'цвет' -%}
-        {%- assign color_option_index = forloop.index0 -%}
-      {%- endif -%}
-    {%- endfor -%}
-
-    {%- if color_option_index != nil -%}
-      <div class="banner-product__colors">
-        {%- assign images_per_color = 5 -%}
-        {%- assign color_index = 0 -%}
-        {%- for variant in banner_product.variants -%}
-          {%- if variant.featured_image -%}
-            {%- assign start_index = color_index | times: images_per_color -%}
-            {%- assign end_index = start_index | plus: images_per_color | minus: 1 -%}
-            <button 
-              type="button"
-              class="banner-product__color-btn"
-              data-start="{{ start_index }}"
-              data-end="{{ end_index }}"
-              data-price="{{ variant.price | money }}"
-              data-compare="{{ variant.compare_at_price | money }}"
-              data-available="{{ variant.available }}"
-              data-qty="{{ variant.inventory_quantity }}"
-            >
-              {{ variant.featured_image | image_url: width: 60 | image_tag: alt: variant.featured_image.alt | default: banner_product.title | default: 'Product image' }}
-
-            </button>
-            {%- assign color_index = color_index | plus: 1 -%}
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-
-      <div 
-        class="banner-product__stock js-stock"
-        data-not-available="{{ 'products.product.banner.not_available' | t: default: 'Not available' }}"
-        data-available-template="{{ 'products.product.banner.available_with_count' | t: count: '__COUNT__', default: 'Available: __COUNT__' }}"
-      >
-        {{ 'products.product.banner.select_color' | t: default: 'Choose a color' }}
-      </div>
-    {%- endif -%}
-
-     <p class="banner-product__select-size">Select Size:</p>
-    <div class="banner-product__sizes">
-     
-      {%- assign sizes = banner_product.variants | map: 'option2' | uniq -%}
-      {%- for size in sizes -%}
-        {%- assign variant = banner_product.variants | where: 'option2', size | first -%}
-        {%- if variant -%}
-          <button 
-            type="button" 
-            class="banner-product__size-btn"
-            data-variant-id="{{ variant.id }}"
-            data-available="{{ variant.available }}"
-          >
-             EU {{ size }}
-          </button>
-        {%- endif -%}
-      {%- endfor -%}
+{%- else -%}
+  <div class="banner-product container">
+    <div class="banner-product__gallery"
+         data-all-images='[
+           {%- if banner_product.images != blank -%}
+             {%- for image in banner_product.images -%}
+               "{{ image | image_url: width: 800 }}"{% unless forloop.last %},{% endunless %}
+             {%- endfor -%}
+           {%- else -%}
+             "{{ 'product-placeholder.jpg' | asset_url }}" alt="Placeholder image"
+           {%- endif -%}
+         ]'>
+      <div class="banner-product__thumbs"></div>
+      <div class="banner-product__main"></div>
     </div>
 
-    {%- assign first_variant = banner_product.variants.first -%}
+    <div class="banner-product__content">
+      <h2 class="banner-product__title">{{ banner_product.title | escape }}</h2>
 
-<a 
-  href="/cart/add?id={{ first_variant.id }}&quantity=1" 
-  class="banner-product__add-to-cart"
->
-  Add To Bag
-</a>
-
-    <div class="banner-product__description">
-      {{ banner_product.description | truncatewords: 30, '...' }}
+      {%- render 'banner-product-badge', product: banner_product -%}
+      {%- render 'banner-product-price', product: banner_product -%}
+      {%- render 'banner-product-colors', product: banner_product -%}
+      {%- render 'banner-product-sizes', product: banner_product -%}
+      {%- render 'banner-product-add-to-cart', product: banner_product -%}
+      {%- render 'banner-product-description', product: banner_product -%}
     </div>
   </div>
-</div>
-
-
+{%- endif -%}

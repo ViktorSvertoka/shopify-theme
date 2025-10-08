@@ -1,0 +1,19 @@
+<nav class="nav" role="navigation" aria-label="{{ 'a11y.main_nav' | t: default: 'Main navigation' }}">
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a href="{{ routes.root_url }}" class="nav__link">
+        {{- 'header.home' | t: default: 'Home' -}}
+      </a>
+    </li>
+    <li class="nav__item">
+      <a href="{{ routes.collections_url }}" class="nav__link">
+        {{- 'header.shop' | t: default: 'Shop' -}}
+      </a>
+    </li>
+    <li class="nav__item">
+      <a href="{{ routes.search_url }}" class="nav__link">
+        {{- 'header.search' | t: default: 'Search' -}}
+      </a>
+    </li>
+  </ul>
+</nav>
