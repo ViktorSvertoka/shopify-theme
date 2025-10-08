@@ -1,0 +1,33 @@
+<div class="header__actions" role="group">
+  <a 
+    href="{{ routes.search_url }}" 
+    class="header__icon"
+    aria-label="{{ 'a11y.search' | t }}"
+  >
+    <img src="{{ 'icon-search.svg' | asset_url }}" alt="Icon search" width="20" height="20" aria-hidden="true">
+    <span class="visually-hidden">{{ 'header.search' | t }}</span>
+  </a>
+
+  <a 
+    href="{{ routes.account_url }}" 
+    class="header__icon"
+    aria-label="{{ 'a11y.account' | t }}"
+  >
+    <img src="{{ 'icon-account.svg' | asset_url }}" alt="Icon account" width="20" height="20" aria-hidden="true">
+    <span class="visually-hidden">{{ 'header.account' | t }}</span>
+  </a>
+
+  <a 
+    href="{{ routes.cart_url }}" 
+    class="header__icon header__icon--cart"
+    aria-label="{{ 'a11y.open_cart' | t }}"
+  >
+    <img src="{{ 'icon-cart.svg' | asset_url }}" alt="Icon cart" width="20" height="20" aria-hidden="true">
+    {% if cart.item_count > 0 %}
+      <span class="header__cart-count" data-cart-count="{{ cart.item_count }}">
+        {{ cart.item_count }}
+      </span>
+    {% endif %}
+    <span class="visually-hidden">{{ 'header.cart' | t }}</span>
+  </a>
+</div>
