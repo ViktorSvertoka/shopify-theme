@@ -1,0 +1,15 @@
+{%- if product.tags contains "Highly Rated" -%}
+  <p class="banner-product__badge">
+    <img 
+      src="{{ 'icon-star.svg' | asset_url }}" 
+      alt="{{ 'products.badge.highly_rated' | t }}" 
+      class="badge__icon"
+      width="16"
+      height="16"
+      aria-hidden="true"
+      loading="lazy"
+    >
+    {{ 'products.badge.highly_rated' | t }}
+  </p>
+{%- endif -%}
+

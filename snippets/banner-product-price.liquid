@@ -1,0 +1,10 @@
+{%- if product.price != blank -%}
+  <div class="banner-product__price">
+    {%- if product.compare_at_price > product.price -%}
+      <span class="price price--sale">{{ product.price | money }}</span>
+      <span class="price price--old">{{ product.compare_at_price | money }}</span>
+    {%- else -%}
+      <span class="price">{{ product.price | money }}</span>
+    {%- endif -%}
+  </div>
+{%- endif -%}

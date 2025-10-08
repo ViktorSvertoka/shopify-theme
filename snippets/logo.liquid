@@ -1,0 +1,18 @@
+{%- if section.settings.logo != blank -%}
+  <a href="{{ routes.root_url }}" class="logo">
+    {{- section.settings.logo | image_url: width: 200 | image_tag: 
+        alt: shop.name,
+        width: section.settings.logo.width,
+        height: section.settings.logo.height -}}
+  </a>
+{%- else -%}
+  <a href="{{ routes.root_url }}" class="logo logo--svg">
+    <img 
+      src="{{ 'icon-shopify.svg' | asset_url }}" 
+      alt="{{ shop.name }}" 
+      width="40" 
+      height="40"
+      class="logo__img"
+    >
+  </a>
+{%- endif -%}

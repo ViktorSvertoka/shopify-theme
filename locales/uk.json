@@ -1,0 +1,49 @@
+{
+  "home": {
+    "welcome": "Ласкаво просимо до нашого магазину",
+    "description": "Відкрийте для себе нашу колекцію товарів",
+    "shop_now": "Купити зараз"
+  },
+  "header": {
+    "home": "Головна",
+    "shop": "Магазин",
+    "search": "Пошук",
+    "cart": "Кошик",
+    "account": "Акаунт"
+  },
+  "footer": {
+    "description": "Ваш надійний онлайн-магазин",
+    "links_heading": "Швидкі посилання",
+    "info_heading": "Інформація",
+    "search": "Пошук",
+    "login": "Вхід",
+    "cart": "Кошик",
+    "copyright": "Всі права захищені."
+  },
+  "a11y": {
+    "main_nav": "Головна навігація",
+    "footer_nav": "Навігація у підвалі",
+    "footer_info": "Інформація",
+    "search": "Пошук",
+    "account": "Акаунт",
+    "open_cart": "Відкрити кошик",
+    "select_color": "Вибрати колір"
+  },
+  "products": {
+    "badge": {
+      "highly_rated": "Високий рейтинг"
+    },
+    "product": {
+      "banner": {
+        "not_found": "Товар не знайдено",
+        "select_color": "Вибрати колір",
+        "select_color_prompt": "Оберіть колір",
+        "select_size": "Оберіть розмір:",
+        "select_size_label": "Вибрати розмір",
+        "add_to_bag": "Додати в кошик",
+        "not_available": "Немає в наявності",
+        "available_with_count": "В наявності: {{ count }}"
+      }
+    }
+  }
+}
