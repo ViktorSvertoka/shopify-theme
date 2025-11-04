@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const gallery = document.querySelector('.banner-product__gallery');
+  const gallery = document.querySelector('[data-all-images]');
   if (!gallery) return;
 
   const allImages = JSON.parse(gallery.dataset.allImages || '[]');
   const mainImage = document.querySelector('.banner-product__main');
   const thumbsImage = document.querySelector('.banner-product__thumbs');
-  const stockBlock = document.querySelector('.js-stock');
+  const stockBlock = document.querySelector('.banner-product__stock');
   const colorButtons = document.querySelectorAll('.banner-product__color-btn');
   const sizeButtons = document.querySelectorAll('.banner-product__size-btn');
   const priceBlock = document.querySelector('.banner-product__price');
@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mainImage.innerHTML = `
       <div>
-        <img src="${images[0]}" alt="{{ banner_product.title }}" class="product__image js-main-image" />
+        <img src="${images[0]}" alt="Product" class="w-[468px] h-[468px] sm:w-[536px] sm:h-[536px] object-cover block js-main-image" />
       </div>`;
 
     thumbsImage.innerHTML = images
       .map(
         (img, idx) => `
-        <div class="banner-product__thumb">
+        <div class="rounded-base overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 mb-6 last:mb-0">
           <img 
             src="${img}" 
-            alt="{{ banner_product.title }}" 
-            class="product__image js-thumb-image ${
+            alt="Product thumbnail" 
+            class="w-[88px] h-[88px] object-cover block js-thumb-image ${
               idx === 0 ? 'is-active' : ''
             }" 
           />
@@ -42,18 +42,39 @@ document.addEventListener('DOMContentLoaded', () => {
       thumb.addEventListener('click', () => {
         mainImg.src = thumb.src;
 
-        thumbImgs.forEach(t => t.classList.remove('is-active'));
-        thumb.classList.add('is-active');
+        thumbImgs.forEach(t =>
+          t.classList.remove(
+            'is-active',
+            'ring-2',
+            'ring-dark',
+            'dark:ring-darkInverse'
+          )
+        );
+        thumb.classList.add(
+          'is-active',
+          'ring-2',
+          'ring-dark',
+          'dark:ring-darkInverse'
+        );
       });
     });
+
+    // Add ring to first active thumb
+    if (thumbImgs[0]) {
+      thumbImgs[0].classList.add(
+        'ring-2',
+        'ring-dark',
+        'dark:ring-darkInverse'
+      );
+    }
   }
 
   function updatePrice(price, compare) {
     if (!priceBlock) return;
     if (compare && compare !== 'null') {
       priceBlock.innerHTML = `
-        <span class="price price--sale">${price}</span>
-        <span class="price price--old">${compare}</span>
+        <span class="price price--sale text-dark dark:text-darkInverse font-semibold">${price}</span>
+        <span class="price price--old line-through text-oldPrice dark:text-oldPriceDark ml-2">${compare}</span>
       `;
     } else {
       priceBlock.innerHTML = `<span class="price">${price}</span>`;
@@ -66,7 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
       parseInt(firstBtn.dataset.start),
       parseInt(firstBtn.dataset.end)
     );
-    firstBtn.classList.add('is-active');
+    firstBtn.classList.add(
+      'is-active',
+      '!border-dark',
+      'dark:!border-darkInverse'
+    );
     updatePrice(firstBtn.dataset.price, firstBtn.dataset.compare);
 
     colorButtons.forEach(btn => {
@@ -89,8 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updatePrice(btn.dataset.price, btn.dataset.compare);
 
-        colorButtons.forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
+        colorButtons.forEach(b => {
+          b.classList.remove(
+            'is-active',
+            '!border-dark',
+            'dark:!border-darkInverse'
+          );
+        });
+        btn.classList.add(
+          'is-active',
+          '!border-dark',
+          'dark:!border-darkInverse'
+        );
       });
     });
   }
@@ -98,8 +133,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sizeButtons.length) {
     sizeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        sizeButtons.forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
+        sizeButtons.forEach(b => {
+          b.classList.remove(
+            'is-active',
+            '!border-dark',
+            'dark:!border-darkInverse'
+          );
+        });
+        btn.classList.add(
+          'is-active',
+          '!border-dark',
+          'dark:!border-darkInverse'
+        );
       });
     });
   }
